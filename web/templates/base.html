@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <style>
+    body {
+        height: 500vh;
+
+        background-color: #34859b;
+        background-image: linear-gradient(45deg, #87759a 0%, #1d5f66 100%);
+        
+
+    }
+
+    .container-1 {
+        transform: translate(0, 50%)
+    }
+</style>
+ 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+   
+
+<body background="ages">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+   
+   
+   <!-- navibar -->
+  
+    <nav class="navbar navbar-dark bg-dark fixed-top-3">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <a class="navbar-brand" href="#" centre >socialmedia</a>
+    
+      <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo03"> -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link "href="{%url 'signin'%}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'sign-out'%}">logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%url 'profile'%}">my profile</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link px-lg-2 py-3 py-lg-3" href="{%url 'people'%}">Friends</a>
+          </li>
+
+          
+         
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  
+  </nav> 
+
+
+
+
+
+
+
+
+
+ 
+
+  <!-- end navibar -->
+
+  {% block body_block%}
+  {%endblock%}
+
+
+
+
+
+
+  
+  <!-- Footer -->
+  <section class="footer">
+    <footer class="text-center text-white" style="background-color: #0a4275">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex justify-content-center align-items-center">
+            <span class="me-3"> free</span>
+            <button type="button" class="btn btn-outline-light btn-rounded">
+              !
+            </button>
+          </p>
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 :
+        <a class="text-white" href=""></a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </section>
+  <!--End of Footer -->
+</body>
+</html>
