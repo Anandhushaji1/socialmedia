@@ -7,8 +7,9 @@ urlpatterns = [
     path("posts/<int:id>/comment/add/",add_comments,name="add-comments"),
     path("post/<int:id>/like/add/",like_post,name="add-like"),
     path("logout",sign_out_view,name="sign-out"),
-path("user/<int:id>/follower/add",add_follower, name="add-follower"),
+    path("user/<int:id>/follower/add",add_follower, name="add-follower"),
     path("post/<int:id>/remove",post_delete,name="post-delete"),
     path("profile/", ProfileView.as_view(), name="profile"),
-    path("people/", ListPeopleView.as_view(),name="people")
+    path("people/", ListPeopleView.as_view(),name="people"),
+    # path("users/profile/<int:id>/change",EditprofileView.as_view(),name="edit-profile")
 ]

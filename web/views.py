@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 # Create your views here.
-from django.views.generic import CreateView,FormView,TemplateView,ListView
+from django.views.generic import CreateView,FormView,TemplateView,ListView,UpdateView
 from .forms import LoginForm,UserRegistrationForm,PostForm
 from django.urls import reverse_lazy
 from django.contrib.auth import authenticate,login,logout
@@ -118,6 +118,7 @@ def post_delete(request,*args,**kw):
     Posts.objects.get(id=id).delete()
     return redirect("index")
 
+
 class ProfileView(ListView):
     template_name="profile.html"
     model=Posts
@@ -125,5 +126,14 @@ class ProfileView(ListView):
 
     def get_queryset(self):
         return Posts.objects.filter(user=self.request.user).order_by("-created_date")
+
+
+
+# class EditprofileView(UpdateView):
+#     template_name="proedit.html"
+#     form_class=ProfileForm
+#     model=Userprofile
+#     pk_url_kwarg="id"
+#     success_url=reverse_lazy("listpost")        
 
 

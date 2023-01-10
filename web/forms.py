@@ -8,7 +8,7 @@ class PostForm(forms.ModelForm):
         model=Posts
         fields=["title","image"]
         widgets={
-            "title":forms.TextInput(attrs={"class":"form-control"}),
+            "title":forms.TextInput(attrs={"class":"form-control" }),
             "image":forms.FileInput(attrs={"class":"form-select"})
         }
 
